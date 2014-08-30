@@ -1,6 +1,7 @@
 require 'froyo_api/version'
 require './lib/froyo_api/client'
 require './lib/froyo_api/password'
+require './lib/froyo_api/name'
 
 module FroyoApi
   URL = 'http://api.froyo.io'
