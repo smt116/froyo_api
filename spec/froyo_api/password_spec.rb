@@ -36,7 +36,7 @@ RSpec.describe FroyoApi::Password do
   describe '.new' do
     subject { password }
 
-    it { expect(subject.password).to be_a(String) }
+    it { expect(subject.password).to eq('wroweste') }
 
     context 'length of generated password' do
       it { expect(subject.password.length).to eq(8) }

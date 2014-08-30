@@ -31,15 +31,13 @@ RSpec.describe FroyoApi::Name do
 
     context 'when initialized with "k"' do
       let(:name) { FroyoApi::Name.new('k') }
+
       it { expect(name.gender).to eq('k') }
     end
   end
 
   describe '.attributes' do
-    subject { name.attributes }
-
-    it { expect(subject).to be_a(Hash) }
-    it { expect(subject).to eq({
+    it { expect(name.attributes).to eq({
       'fullname'    => 'Leo King',
       'firstname'   => 'Leo',
       'lastname'    => 'King'
@@ -47,23 +45,14 @@ RSpec.describe FroyoApi::Name do
   end
 
   describe '.fullname' do
-    subject { name.fullname }
-
-    it { expect(subject).to be_a(String) }
-    it { expect(subject).to eq('Leo King') }
+    it { expect(name.fullname).to eq('Leo King') }
   end
 
   describe '.firstname' do
-    subject { name.firstname }
-
-    it { expect(subject).to be_a(String) }
-    it { expect(subject).to eq('Leo') }
+    it { expect(name.firstname).to eq('Leo') }
   end
 
   describe '.lastname' do
-    subject { name.lastname }
-
-    it { expect(subject).to be_a(String) }
-    it { expect(subject).to eq('King') }
+    it { expect(name.lastname).to eq('King') }
   end
 end
