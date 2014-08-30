@@ -2,10 +2,8 @@ require 'spec_helper'
 
 RSpec.describe FroyoApi::Photo do
   let(:photo) { FroyoApi::Photo.new }
-  let(:client) { FroyoApi::Client.new }
 
   before do
-    allow(client).to receive(:request)
     allow(RestClient::Request).to receive(:execute).and_return({
       'version'       => '1.0',
       'attributes'    => {
