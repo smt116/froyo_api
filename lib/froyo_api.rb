@@ -1,5 +1,5 @@
-require "froyo_api/version"
+require 'froyo_api/version'
 
 module FroyoApi
-  # Your code goes here...
+  URL = 'http://api.froyo.io'
 end
