@@ -29,10 +29,10 @@ RSpec.describe FroyoApi::Name do
       it { expect(name.gender).to eq('m') }
     end
 
-    context 'when initialized with "k"' do
-      let(:name) { FroyoApi::Name.new('k') }
+    context 'when initialized with "f"' do
+      let(:name) { FroyoApi::Name.new('f') }
 
-      it { expect(name.gender).to eq('k') }
+      it { expect(name.gender).to eq('f') }
     end
   end
 
