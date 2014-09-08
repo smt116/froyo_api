@@ -45,8 +45,6 @@ module FroyoApi
       @attributes ||= fetch
     end
 
-    private
-
     def path
       "apod"
     end
