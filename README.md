@@ -1,4 +1,4 @@
-# FroyoApi
+# FroyoApi [![Build Status](https://travis-ci.org/smt116/froyo_api.svg?branch=master)](https://travis-ci.org/smt116/froyo_api)
 
 Ruby gem for http://api.froyo.io
 
