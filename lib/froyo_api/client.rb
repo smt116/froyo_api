@@ -4,8 +4,7 @@ require 'json'
 module FroyoApi
   class Client
     def request(path)
-      options = params(path)
-      RestClient::Request.execute(options) do |response, request|
+      RestClient::Request.execute(params(path)) do |response, request|
         JSON.parse(response.body)
       end
     end

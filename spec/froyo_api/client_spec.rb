@@ -7,7 +7,7 @@ RSpec.describe FroyoApi::Client do
     before do
       allow(RestClient::Request).
         to receive(:execute).
-        with(options).
+        with(params).
         and_return({test: 'ok'})
     end
 
@@ -15,7 +15,7 @@ RSpec.describe FroyoApi::Client do
 
     private
 
-    def options
+    def params
       {
         method:   :get,
         url:      "http://api.froyo.io/test",

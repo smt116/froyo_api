@@ -26,16 +26,8 @@ module FroyoApi
           end
         end
 
-        options = {
-          url:            href,
-          method:         :get,
-          block_response: process_response,
-          headers:        {
-            accept: type
-          }
-        }
-
-        RestClient::Request.execute(options)
+        params = params_for_download.merge(block_response: process_response)
+        RestClient::Request.execute(params)
       end
     end
 
@@ -43,6 +35,16 @@ module FroyoApi
 
     def attributes
       @attributes ||= fetch
+    end
+
+    def params_for_download
+      {
+        url:      href,
+        method:   :get,
+        headers:  {
+          accept: type
+        }
+      }
     end
 
     def path
